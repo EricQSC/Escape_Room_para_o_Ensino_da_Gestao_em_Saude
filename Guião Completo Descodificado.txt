@@ -1,0 +1,102 @@
+====Painel Inicial (DIRETORA DE ENFERMAGEM):
+
+"Bem-vindos. Antes de assumirem funções, preciso de confirmar que estão preparados para integrar a Direção de Enfermagem. Nesta sala encontram-se três desafios sobre os fundamentos da gestão e organização dos cuidados. Cada resposta correta revela uma parte do código que vos permitirá aceder à enfermaria. Observem, discutam em equipa e decidam. Na Direção, nenhuma decisão é tomada sem fundamento."
+Falas de NPCs iniciais / Sala de Espera (Linhas 1–55):
+"Não tem autorização para estar neste local!"
+"Não concordo com este modelo de gestão" / "Este é sempre do contra ..."
+"Já estou à espera há horas! Quando é que alguém me atende?"
+
+====ETAPA 1: Sala da Direção / Receção (3 Desafios para abrir a porta recepcao)
+
+----Desafio A — Variável Rececao (Teorias da Administração)
+
+Pergunta 1: Qual das seguintes características está associada à Teoria Clássica de Fayol?
+Opções: 1. Motivação, comunicação e relações interpessoais | 2. Hierarquia e centralização das decisões | 3. Adaptação ao contexto -> Correta: 2
+
+Pergunta 2: Que teoria centra a eficiência na tarefa do trabalhador, numa perspetiva micro?
+Opções: 1. Teoria Clássica | 2. Administração Científica | 3. Teoria dos Sistemas -> Correta: 2
+
+Pergunta 3: Que teoria dá ênfase ao ambiente e entende a organização como um sistema aberto?
+Opções: 1. Teoria Clássica | 2. Teoria Estruturalista | 3. Teoria dos Sistemas -> Correta: 3
+
+Pergunta 4: Segundo a Teoria das Relações Humanas, que fatores influenciam particularmente o desempenho dos profissionais?
+Opções: 1. Motivação, comunicação e relações interpessoais | 2. Hierarquia e centralização das decisões | 3. Especialização das tarefas -> Correta: 1
+
+Pergunta 5: Que teoria procura máxima produção a mínimo custo através do estudo de tempos e movimentos?
+Opções: 1. Teoria Clássica | 2. Administração Científica | 3. Teoria Estruturalista -> Correta: 2
+
+Se acertar tudo: Painel "Acesso autorizado" — "Parabéns. Uma das verificações foi concluída!" -> Define Rececao = verdadeiro.
+Se errar: Painel "Resposta incorreta." — "Volta a tentar."
+
+----Desafio B — Variável livro (GESTÃO EM ACÇÃO, Linhas 59–69)
+
+Pergunta 1: Perante serviços com realidades distintas, qual é a decisão de gestão mais fundamentada?
+Opções: 1. Aplicar princípios, fundamentar decisões | 2. Aplicar uma estrutura única | 3. Adaptar a gestão ao contexto -> Correta: 3 (ou 1 conforme o bloco inicial)
+
+Pergunta 2 (Linha 60): Uma Direção analisa como uma mudança num serviço afeta os restantes. Que princípio está a aplicar?
+Opções: 1. Interdependência dos sistemas | 2. Especialização das tarefas | 3. Centralização da autoridade -> Correta: 1
+
+Pergunta 3 (Linha 61): Numa organização, qual é o foco da gestão segundo Fayol?
+Opções: 1. Eficiência de cada tarefa | 2. Estrutura e funções da organização | 3. Relações informais da equipa -> Correta: 2
+
+Se acertar tudo (Linhas 62–63): Painel "Parabéns" — "Foi desbloqueado mais um item..." -> Define livro = verdadeiro.
+
+----Desafio C — Variável Telefone (Chamada do Concelho de administração, Linhas 70–77)
+
+Painel Inicial: "Chamada do Concelho de administração" — "Da teoria da gestão à organização dos cuidados"
+
+Pergunta 1 (Linha 70): Que método de trabalho mais reflete os princípios de divisão e especialização das tarefas?
+Opções: 1. Método individual | 2. Método funcional | 3. Enfermeiro de referência -> Correta: 2
+
+Pergunta 2 (Linha 71): Que princípio de gestão está mais presente num método de trabalho centrado na execução de tarefas?
+Opções: 1. Especialização do trabalho | 2. Adaptação ao contexto | 3. Participação nas decisões -> Correta: 1
+
+Pergunta 3 (Linha 72): Que característica distingue o gestor de caso do enfermeiro de referência?
+Opções: 1. Planeia e avalia os cuidados | 2. É responsável pelo cliente | 3. Acompanha o cliente em diferentes contextos de saúde -> Correta: 3
+
+Se acertar tudo (Linhas 73–74): Painel "Parabéns" — "Conseguiu outro código de acesso" -> Define Telefone = verdadeiro.
+Porta da Receção (porta recepcao, Linhas 78–85)
+Se faltar algum dos 3 (Rececao, Telefone, livro): Painel "Procura o código" — "Sem o código não consegues passar ao nível seguinte".
+Se os 3 forem verdadeiro:
+Painel "Podes passar à etapa seguinte" — "Parabéns".
+Animação de porta recepcao = Open.
+Painel "ETAPA 2: ORGANIZAR PARA CUIDAR" — "Foram reportadas falhas na continuidade dos cuidados nesta enfermaria. A Direção de Enfermagem precisa de perceber como o trabalho está organizado. Observem o serviço e recolham os testemunhos. No final, terão de identificar o método de trabalho utilizado.".
+
+====ETAPA 2: Enfermaria e Cadeado da Administração (Linhas 86–106)
+
+Lock (Linhas 87–88): Mostra "🔒 RELATÓRIO BLOQUEADO" — "Ainda não existem dados suficientes para concluir a auditoria. Recolham os testemunhos da enfermaria."
+
+enfermeiro riuvo1 (Linhas 89–90): Fala "🧼Tenho os autocuidados " durante 4 seg.
+enfermeiro loiro1 (Linhas 91–92): Fala "Tenho de ir fazer os pensos" durante 4 seg.
+enfermeiro loiro (Linhas 93–94): Fala "💊 Durante este turno administro terapêutica".
+Man pattern shirt (Linhas 95–97): Fala "Mas afinal, quem é o enfermeiro responsável pelos meus cuidados?" (4 seg) e abre o Quiz:
+
+Pergunta: Com base nos testemunhos recolhidos, que método de trabalho está implementado nesta enfermaria?
+Opções: 1. Método individual | 2. Método funcional | 3. Enfermeiro de referência -> Correta: 2
+
+Se acertar (Linhas 98–105):
+cadeado = verdadeiro, toca som cadeado, abre Lock e muda cor para amarelo (#FFC72E).
+Mostra "📋 RELATÓRIO DE AUDITORIA": "A organização dos cuidados está centrada na distribuição de tarefas entre os profissionais. Foram identificados sinais de fragmentação dos cuidados e dificuldade em reconhecer um enfermeiro responsável pelo acompanhamento global do doente. A Direção de Enfermagem terá agora de decidir como reorganizar os cuidados. Passem ao gabinete da Enfermeira Diretora".
+Toca som freesound_community-old-door-open-102660.mp3 e abre porta adminitracao e porta adminstracao2.
+Se errar (Linha 106): Mostra "🔒 Relatório bloqueado." — "A conclusão não é consistente com os dados recolhidos. Revejam os testemunhos e tentem novamente."
+
+====ETAPA 3: Gabinete da Enfermeira Diretora (Linhas 118–130)
+
+Ao clicar na Enfermeira Diretora (Linhas 118–120): Animação Talk angry + Painel "Já analisei o relatório da auditoria" — "Agora preciso que avancem para a solução. Se o método atual está a fragmentar os cuidados, como propõem reorganizá-los para reforçar a continuidade e a responsabilização?"
+
+Pergunta 1 (Linha 121): Que método favorece a responsabilização de um enfermeiro pelos cuidados globais de um grupo de doentes?
+Opções: 1. Método funcional | 2. Enfermeiro de referência / Método individual | 3. Gestor de caso -> Correta: 2
+
+Painel Intermédio (Linha 122): "A proposta melhora a responsabilização durante o internamento. Mas tenho outro problema para resolver. Um doente com necessidades complexas prepara-se para ter alta. Necessitará de acompanhamento entre hospital, cuidados continuados, comunidade e família. A continuidade dos cuidados não pode terminar à porta do hospital."
+
+Pergunta 2 (Linha 123): Que modelo responde melhor à necessidade de coordenação entre diferentes contextos de cuidados?
+Opções: 1. Método funcional | 2. Enfermeiro de referência | 3. Gestor de caso -> Correta: 3
+
+Pergunta 3 (Linha 124): O que distingue, neste caso, o gestor de caso?
+Opções: 1. Executa todas as intervenções | 2. Articula o percurso entre diferentes contextos | 3. Distribui tarefas pela equipa -> Correta: 2
+
+Vitória Final (Linhas 125–127):
+Painel "É esta a resposta que procurávamos" — "Decisão aprovada. O gestor de caso permite coordenar o percurso da pessoa entre diferentes contextos, promovendo continuidade e articulação dos cuidados."
+
+Toca som winner.
+Painel "🏆 MISSÃO CONCLUÍDA" — "A reorganização dos cuidados foi aprovada pela Direção de Enfermagem. Ao longo desta missão, analisaram princípios de gestão, identificaram a organização do trabalho, reconheceram os seus efeitos e fundamentaram decisões para melhorar a continuidade dos cuidados. Gerir em enfermagem é transformar conhecimento em decisões que melhoram os cuidados. Parabéns. Missão cumprida!"
